@@ -36,7 +36,9 @@
           <li class="hover:bg-gray-200 py-4 px-6 w-full">
             <RouterLink to="/area">Area</RouterLink>
           </li>
-          <li class="hover:bg-gray-200 py-4 px-6 w-full">Team</li>
+          <li class="hover:bg-gray-200 py-4 px-6 w-full">
+            <RouterLink to="/club">Club</RouterLink>
+          </li>
         </ul>
       </div>
 
