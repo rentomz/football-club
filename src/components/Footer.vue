@@ -14,11 +14,6 @@
         <RouterLink
           to="/"
           class="text-xl text-indigo-50 hover:text-white duration-500 px-2"
-          >RSS</RouterLink
-        >
-        <RouterLink
-          to="/"
-          class="text-xl text-indigo-50 hover:text-white duration-500 px-2"
           >News Letter</RouterLink
         >
       </div>

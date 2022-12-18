@@ -1,7 +1,7 @@
 .
 <template>
   <section id="area">
-    <div class="px-4 py-8">
+    <div class="px-4 py-8 w">
       <h1 class="text-4xl font-bold text-center mb-8">Area</h1>
       <!-- loading -->
       <loader v-if="isLoading" />
@@ -10,16 +10,16 @@
       <div v-else>
         <!-- Item -->
         <div class="flex flex-wrap justify-center" v-if="areas.length > 0">
-          <div class="item" v-for="index in 15" :key="index">
+          <div class="item" v-for="(item, index) in areas" :key="index">
             <div
               class="w-60 max-w-xs m-3 px-4 py-4 rounded overflow-hidden shadow-md"
             >
-              <a @click="goToDetail(areas[index].id)" class="cursor-pointer">
+              <a @click="goToDetail(item.id)" class="cursor-pointer">
                 <!-- image not null -->
                 <img
                   class="mx-auto w-16 h-16"
-                  v-if="areas[index].ensignUrl != null"
-                  :src="areas[index].ensignUrl"
+                  v-if="item.ensignUrl != null"
+                  :src="item.ensignUrl"
                   alt="Flag"
                 />
                 <!-- image null -->
@@ -32,7 +32,7 @@
 
                 <div class="pt-2">
                   <div class="font-bold text-xl mb-2 text-center">
-                    {{ areas[index].name }}
+                    {{ item.name }}
                   </div>
                 </div>
               </a>
@@ -42,15 +42,6 @@
         <div v-else>
           <h1 class="text-2xl text-red-400 text-center py-4">Data Not Found</h1>
         </div>
-
-        <div class="my-4 mx-4 text-center">
-          <router-link
-            class="bg-slate-800 hover:bg-slate-900 text-white font-bold py-2 px-4 rounded content-center"
-            to="/area"
-          >
-            See The Area
-          </router-link>
-        </div>
       </div>
     </div>
   </section>
@@ -58,8 +49,7 @@
 
 <script>
 import axios from "axios";
-import Loader from "./Loader.vue";
-const clientToken = "9e0ffbeece7244ad9cf02f3e6e613fe5";
+import Loader from "../components/Loader.vue";
 
 export default {
   components: { Loader },
@@ -75,10 +65,6 @@ export default {
       axios({
         method: "get",
         url: "/areas",
-        // config,
-        // headers: {
-        //   "X-Auth-Token": clientToken,
-        // },
       })
         .then((response) => {
           this.areas = response.data.areas;
@@ -109,4 +95,7 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+  #area {
+    min-height: 100vh;
+}</style>

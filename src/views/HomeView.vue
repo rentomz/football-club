@@ -1,9 +1,9 @@
 <template>
   <!-- Hero Section Start -->
-  <Hero/>
+  <Hero />
   <!-- Hero Section End -->
   <!-- Section Area Start -->
-  <Area/>
+  <Area />
   <!-- Section Area End -->
 </template>
 
@@ -11,7 +11,7 @@
 import Area from "../components/Area.vue";
 import Hero from "../components/Hero.vue";
 export default {
-    name: "Home View",
-    components: { Area, Hero }
+  name: "Home View",
+  components: { Area, Hero },
 };
 </script>

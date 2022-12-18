@@ -23,6 +23,15 @@ export default defineConfig({
   //   },
   // },
   // devServer: {
-  //   proxy: 'https://api.football-data.org/',
-  //   }
+  //   proxy: {
+  //     '^/rp': {
+  //       target: 'https://api.football-data.org/',
+  //       secure: false,
+  //       logLevel: 'debug',
+  //       pathRewrite: { 
+  //         '^/rp': '/'
+  //       }
+  //     },
+  //   },
+  // },
 });

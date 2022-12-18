@@ -1,10 +1,10 @@
 <template>
-  <header class="w-full items-center" style="background-color: #11181F;">
+  <header class="w-full items-center" style="background-color: #11181f">
     <nav class="p-5 shadow-lg md:flex md:items-center md:justify-between">
       <div class="flex justify-between items-center">
-        <span class="text-2xl font-semibold text-white cursor-pointer">
+        <a href="/" class="text-2xl font-semibold text-white cursor-pointer">
           Foot Ball Club
-        </span>
+        </a>
 
         <!-- Mobile View -->
         <button
@@ -17,20 +17,28 @@
         </button>
       </div>
       <!-- Content Mobile View -->
-      <div v-if="isButton" class="absolute top-0 -right-0 h-screen w-8/12 bg-white border opacity-100 transition-all duration-300">
-          <button
+      <div
+        v-if="isButton"
+        class="absolute top-0 -right-0 h-screen w-8/12 bg-white border opacity-100 transition-all duration-300"
+      >
+        <button
           class="block py-3 px-4 mx-2 rounded focus:outline-none -right-0 hover:bg-gray-200"
           @click="switchButton()"
         >
-        <div class="close"></div>
-        
+          <div class="close"></div>
         </button>
-            <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
-              <li class="hover:bg-gray-200 py-4 px-6 w-full">Home</li>
-              <li class="hover:bg-gray-200 py-4 px-6 w-full">Area</li>
-              <li class="hover:bg-gray-200 py-4 px-6 w-full">Team</li>
-            </ul>
-          </div>
+        <ul
+          class="flex flex-col items-center w-full text-base cursor-pointer pt-10"
+        >
+          <li class="hover:bg-gray-200 py-4 px-6 w-full">
+            <RouterLink to="/">Home</RouterLink>
+          </li>
+          <li class="hover:bg-gray-200 py-4 px-6 w-full">
+            <RouterLink to="/area">Area</RouterLink>
+          </li>
+          <li class="hover:bg-gray-200 py-4 px-6 w-full">Team</li>
+        </ul>
+      </div>
 
       <!-- Web View -->
       <ul
@@ -40,22 +48,22 @@
           <!-- <a href="#" class="text-xl text-white hover:text-sky-800 duration-500">Home</a> -->
           <RouterLink
             to="/"
-            class="text-xl text-indigo-50 hover:text-white duration-500"
+            class="text-xl text-white hover:text-gray-300 duration-100"
             >Home</RouterLink
           >
         </li>
         <li class="mx-6 my-6 md:my-0">
           <RouterLink
-            to="/about"
-            class="text-xl text-indigo-50 hover:text-white duration-500"
+            to="/area"
+            class="text-xl text-white hover:text-gray-300 duration-100"
             >Area</RouterLink
           >
         </li>
         <li class="mx-6 my-6 md:my-0">
           <RouterLink
-            to="/"
-            class="text-xl text-indigo-50 hover:text-white duration-500"
-            >Team</RouterLink
+            to="/club"
+            class="text-xl text-white hover:text-gray-300 duration-100"
+            >Club</RouterLink
           >
         </li>
       </ul>
@@ -68,15 +76,14 @@ export default {
   data() {
     return {
       isButton: false,
-    }
+    };
   },
   methods: {
     switchButton() {
       this.isButton = !this.isButton;
       console.log(this.isButton);
-    }
+    },
   },
-
 };
 </script>
 
@@ -90,10 +97,11 @@ export default {
   opacity: 0.5;
 }
 
-.close:before, .close:after {
+.close:before,
+.close:after {
   position: absolute;
   left: 15px;
-  content: ' ';
+  content: " ";
   height: 33px;
   width: 2px;
   background-color: #333;
@@ -103,4 +111,5 @@ export default {
 }
 .close:after {
   transform: rotate(-45deg);
-}</style>
+}
+</style>
