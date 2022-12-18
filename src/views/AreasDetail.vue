@@ -151,6 +151,7 @@ export default {
     },
   },
   mounted() {
+    this.$emit("scrollToTop", true);
     this.getData();
     this.getDataClub();
   },

@@ -1,6 +1,6 @@
 .<template>
   <!-- loading -->
-  <loader v-if="isLoading" />
+  <loader v-if="isLoading" style="min-height: 80vh;"/>
     <!-- item -->
     <div v-else>
       <div class="club py-8 px-8">
@@ -103,6 +103,7 @@ export default {
     },
   },
   mounted() {
+    this.$emit("scrollToTop", true);
     this.getDataClub();
   },
 };

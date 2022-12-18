@@ -14,10 +14,19 @@ import FooterVue from './components/Footer.vue';
 
   <HeaderVue></HeaderVue>
 
-  <RouterView />
+  <RouterView @scrollToTop="scrollToTop"/>
   <FooterVue></FooterVue>
 </template>
 
+<script>
+export default {
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
+  }
+}
+</script>
 <style scoped>
 
 </style>

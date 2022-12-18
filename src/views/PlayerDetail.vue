@@ -68,6 +68,7 @@ export default {
     },
   },
   mounted() {
+    this.$emit("scrollToTop", true);
     this.getData();
   },
 };
@@ -76,6 +77,10 @@ export default {
 <style>
 .bg-player-detail {
   min-height: 80vh;
+  background-image: url("https://images.unsplash.com/photo-1528731708534-816fe59f90cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
     /* background: rgb(0,7,75);
 background: linear-gradient(90deg, rgba(0,7,75,1) 0%, rgba(3,28,124,1) 51%, rgba(63,82,192,1) 100%); */
 }
