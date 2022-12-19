@@ -2,13 +2,12 @@
 
 This Project Website Build With Vue JS And API https://www.football-data.org/
 
+# Environment
+Node v16.17.0
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
@@ -33,3 +32,12 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Feature
+Menu :
+- Area > Club > Player
+- Club > Player
+- Player
+
+Link Application : 
+https://football-club-rentomz.netlify.app/
