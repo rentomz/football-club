@@ -3,11 +3,17 @@
     <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full self-center px-4 lg:w-1/2">
-          <h1 class="text-base font-semibold text-white md:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            dignissim urna ac velit blandit ultrices. Praesent ut urna quis nunc
-            tincidunt scelerisque. Maecenas eros libero, placerat eget turpis
-            malesuada, accumsan fermentum elit.
+          <!-- <h1 class="text-base font-semibold text-white md:text-xl">
+            There is no victory without hard work and unyielding spirit.
+          </h1> -->
+          <h1 class="text-2xl font-semibold text-white md:text-4xl">
+            You have to fight to achieve your dreams,
+          </h1>
+          <h1 class="text-base font-semibold text-white md:text-2xl">
+            you have to sacrifice and work hard for it
+          </h1>
+          <h1 class="text-sm text-white">
+            - Lionel Messi 
           </h1>
         </div>
         <div class="w-full self-end px-4 lg:w-1/2"></div>

@@ -19,7 +19,7 @@
       <!-- Content Mobile View -->
       <div
         v-if="isButton"
-        class="absolute top-0 -right-0 h-screen w-8/12 bg-white border opacity-100 transition-all duration-300"
+        class="absolute top-0 -right-0 h-screen w-8/12 z-20 bg-white border opacity-100 transition-all duration-300"
       >
         <button
           class="block py-3 px-4 mx-2 rounded focus:outline-none -right-0 hover:bg-gray-200"
