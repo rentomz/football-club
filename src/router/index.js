@@ -12,7 +12,10 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        title: "Home",
+      }
     },
     // {
     //   path: '/about',
@@ -25,29 +28,55 @@ const router = createRouter({
     {
       path: '/area',
       name: 'Areas View',
-      component : AreasView
+      component : AreasView,
+      meta: {
+        title: 'Area',
+      }
     },
     {
       path: "/area/:id",
       name: "Areas Detail",
-      component: AreasDetail
+      component: AreasDetail,
+      meta: {
+        title: 'Areas Detail',
+      }
     },
     {
       path: "/club",
       name: "Clubs View",
-      component: ClubView
+      component: ClubView,
+      meta: {
+        title: 'Club',
+      }
     },
     {
       path: "/club/:id",
       name: "Clubs Detail",
-      component: ClubDetail
+      component: ClubDetail,
+      meta: {
+        title: 'Clubs Detail',
+      }
     },
     {
       path: "/player/:id",
       name: "Player Detail",
-      component: PlayerDetail
+      component: PlayerDetail,
+      meta: {
+        title: 'Player Detail',
+      }
     },
   ]
 })
+
+// const router = new VueRouter({
+//   mode: "history",
+//   base: process.env.BASE_URL,
+//   routes
+// });
+router.beforeEach((to, from, next) => {
+  // console.log(to);
+  document.title = "Football - " + to.meta.title;
+  next();
+});
 
 export default router
